@@ -11,7 +11,7 @@ fun! SetupVAM()
 	" let g:vim_addon_manager = { your config here see "commented version" example and help
 	if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
 		execute '!git clone --depth=1 git://github.com/MarcWeber/vim-addon-manager '
-					\       shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
+					\ shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
 	endif
 
 	call vam#ActivateAddons(["Syntastic"], {'auto_install' : 0})
@@ -25,4 +25,5 @@ endfun
 
 call SetupVAM()
 
+set colorcolumn=90
 
