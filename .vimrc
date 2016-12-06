@@ -1,6 +1,22 @@
 set background=dark
 set nocompatible | filetype indent plugin on | syn on 
+set hidden
+set history=100
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set autoindent
 colorscheme Tomorrow-Night
+set colorcolumn=90
+
+set laststatus=2
+set hlsearch
+set showmatch
+
+let mapleader=","
+map <leader>s :source ~/.vimrc<CR>
 
 fun! SetupVAM()
 	let c = get(g:, 'vim_addon_manager', {})
@@ -25,5 +41,7 @@ endfun
 
 call SetupVAM()
 
-set colorcolumn=90
+
+
+
 
